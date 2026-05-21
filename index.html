@@ -1,0 +1,453 @@
+<html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ward food</title>
+
+<link rel="stylesheet" href="index.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="particles"></div>
+
+<header>
+
+    <div class="logo">
+        🍽 Ward food
+    </div>
+
+    <nav>
+
+        <a href="#" onclick="showSection('home')">
+            Home
+        </a>
+
+        <div class="dropdown">
+
+            <a href="#">
+                Menu ▼
+            </a>
+
+            <div class="dropdown-content">
+
+                <a href="#" onclick="showSection('nasi')">
+                    🍚 Menu Nasi
+                </a>
+
+                <a href="#" onclick="showSection('mie')">
+                    🍜 Menu Mie
+                </a>
+
+                <a href="#" onclick="showSection('sate')">
+                    🍢 Menu Sate
+                </a>
+
+                <a href="#" onclick="showSection('minuman')">
+                    🥤 Menu Minuman
+                </a>
+
+            </div>
+
+        </div>
+
+        <a href="#" onclick="showSection('review')">
+            Review
+        </a>
+
+        <a href="#" onclick="showSection('member')">
+            VIP Member
+        </a>
+
+    </nav>
+
+    <div class="search-box">
+
+        <input type="text" placeholder="Cari makanan...">
+
+        <i class="fas fa-search"></i>
+
+    </div>
+
+    <div class="cart-icon" onclick="toggleCart()">
+
+        <i class="fas fa-shopping-cart"></i>
+
+        <span id="cart-count">0</span>
+
+    </div>
+
+</header>
+
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="overlay">
+
+            <h1>
+                Welcome To Ward food
+            </h1>
+
+            <p>
+                Premium Food • Fast Delivery • Luxury Taste
+            </p>
+
+            <button onclick="showSection('nasi')">
+                ORDER NOW
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="promo">
+        🔥 PROMO HARI INI DISKON 20% + FREE ONGKIR 🔥
+    </div>
+
+</section>
+
+
+<section id="nasi" class="page">
+
+    <h2>
+        🍚 Menu Nasi
+    </h2>
+
+    <div class="product-grid">
+
+
+        <div class="card">
+
+            <img src="nasi-goreng-ayam-special.webp" alt="Nasi Goreng">
+
+            <div class="content">
+
+                <h3>
+                    Nasi Goreng Spesial
+                </h3>
+
+                <div class="price">
+                    Rp 20.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Nasi Goreng Spesial',20000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+		
+
+        <div class="card">
+
+            <img src="0911aae0-03a8-4289-97b5-5c781a5988a4_Go-Food-Merchant_20250424_123928.jpeg" alt="Ayam Geprek">
+
+            <div class="content">
+
+                <h3>
+                    Ayam Geprek
+                </h3>
+
+                <div class="price">
+                    Rp 18.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Ayam Geprek',18000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="mie" class="page">
+
+    <h2>
+        🍜 Menu Mie
+    </h2>
+
+    <div class="product-grid">
+
+
+        <div class="card">
+
+            <img src="55546655.avif" alt="Mie Goreng Jawa">
+
+            <div class="content">
+
+                <h3>
+                    Mie Goreng Jawa
+                </h3>
+
+                <div class="price">
+                    Rp 17.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Mie Goreng Jawa',17000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="images (1).jfif" alt="Mie Kuah Pedas">
+
+            <div class="content">
+
+                <h3>
+                    Mie Kuah Pedas
+                </h3>
+
+                <div class="price">
+                    Rp 16.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Mie Kuah Pedas',16000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="sate" class="page">
+
+    <h2>
+        🍢 Menu Sate
+    </h2>
+
+    <div class="product-grid">
+
+		
+        <div class="card">
+
+            <img src="sate-ayam.jpg" alt="Sate Ayam">
+
+            <div class="content">
+
+                <h3>
+                    Sate Ayam
+                </h3>
+
+                <div class="price">
+                    Rp 22.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Sate Ayam',22000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="sate-kambing-bumbu-kecap.jpg" alt="Sate Kambing">
+
+            <div class="content">
+
+                <h3>
+                    Sate Kambing
+                </h3>
+
+                <div class="price">
+                    Rp 25.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Sate Kambing',25000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="minuman" class="page">
+
+    <h2>
+        🥤 Menu Minuman
+    </h2>
+
+    <div class="product-grid">
+
+
+        <div class="card">
+
+            <img src="images (3).jfif" alt="Es Teh Manis">
+
+            <div class="content">
+
+                <h3>
+                    Es Teh Manis
+                </h3>
+
+                <div class="price">
+                    Rp 8.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Es Teh Manis',8000)">
+                    Beli
+                </button>
+
+            </div>
+
+        <div class="card">
+
+            <img src="manfaat-jus-alpukat-untuk-promil.jpg" alt="Jus Alpukat">
+
+            <div class="content">
+
+                <h3>
+                    Jus Alpukat
+                </h3>
+
+                <div class="price">
+                    Rp 12.000
+                </div>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <button onclick="beli('Jus Alpukat',12000)">
+                    Beli
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="review" class="page">
+
+    <h2>
+        ⭐ Customer Review
+    </h2>
+
+    <div class="review-box">
+
+        <p id="reviewText">
+            "Makanannya super enak dan delivery cepat!" - sergio
+        </p>
+
+    </div>
+
+</section>
+
+<section id="member" class="page">
+
+    <div class="register">
+
+        <h2>
+            ✨ Daftar VIP Member
+        </h2>
+
+        <form onsubmit="registerUser(event)">
+
+            <input type="text" placeholder="Nama Lengkap" required>
+
+            <input type="email" placeholder="Email" required>
+
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit">
+                Daftar Sekarang
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<div id="cart-box" class="hide">
+
+    <h3>
+        🛒 Keranjang Belanja
+    </h3>
+
+    <ul id="cart-items"></ul>
+
+    <h4>
+        Total : Rp <span id="total">0</span>
+    </h4>
+
+    <button class="checkout" onclick="checkout()">
+        Checkout
+    </button>
+
+</div>
+
+<footer>
+    © 2026 Ward food Delivery
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>
